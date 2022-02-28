@@ -11,7 +11,12 @@ function SignIN() {
   })
   const {email,password} = formData
   const navigate = useNavigate()
-  const onChange = () =>{}
+  const onChange = (e) =>{
+    setFormData((prevState)=>({
+      ...prevState,
+      [e.target.id]:e.target.value,
+    }))
+  }
   return (
    <>
       <div className='pageContainer'>
@@ -29,8 +34,15 @@ function SignIN() {
           <Link to='/forget-password' className='forgetPasswordLink'>
           Forget Password
           </Link>
+          <div className="signInBar">
+            <p className="signInText">Sign In</p>
+            <button className="signInButton">
+              <ArrowRightIcon fill='#ffffff' height='34px' width='34px'/>
+            </button>
+          </div>
+          {/* { Google Oauth} */}
         </form>
-
+        <Link to='/signup' className='registerLink'>SIgn Up Instread</Link>
       </div>
    </>
   )
