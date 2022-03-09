@@ -3,6 +3,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import { toast } from 'react-toastify';
 import {getAuth, createUserWithEmailAndPassword, updateProfile} from 'firebase/auth'
 import {db} from '../firebase.config'
+import OAuth from '../components/OAuth'
 import {setDoc, doc, serverTimestamp} from 'firebase/firestore'
 import {ReactComponent as ArrowRightIcon} from '../assets/svg/keyboardArrowRightIcon.svg'
 import visibilityIcon from '../assets/svg/visibilityIcon.svg'
@@ -66,8 +67,9 @@ function SignUP() {
             </button>
           </div>
           {/* { Google Oauth} */}
+          <OAuth />
         </form>
-        <Link to='/signin' className='loginLink'>Sign In Instread</Link>
+        <Link to='/sign-in' className='loginLink'>Sign In Instread</Link>
       </div>
    </>
   )

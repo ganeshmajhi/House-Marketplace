@@ -20,8 +20,8 @@ function App() {
         <Route path='/profile' element={<PrivateRoute />}>
             <Route path='/profile' element={<Profile />} />
         </Route>
-        <Route path='/signin' element={<SignIN/>}/>
-        <Route path='/signup' element={<SignUP/>}/>
+        <Route path='/sign-in' element={<SignIN/>}/>
+        <Route path='/sign-up' element={<SignUP/>}/>
       </Routes>
       <ToastContainer />
        <Navbar/>
