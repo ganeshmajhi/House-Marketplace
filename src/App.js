@@ -10,6 +10,7 @@ import Offers from './pages/Offers'
 import Profile from './pages/Profile'
 import SignIN from './pages/SignIN'
 import SignUP from './pages/SignUP'
+import CreateListing from './pages/CreateListing'
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
         </Route>
         <Route path='/sign-in' element={<SignIN/>}/>
         <Route path='/sign-up' element={<SignUP/>}/>
+        <Route path='/create-listing' element={<CreateListing/>}/>
       </Routes>
       <ToastContainer />
        <Navbar/>
